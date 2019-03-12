@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*===========================================================ASIDE===================================================================*/
+aside {
+	display: block;
+	position: fixed;
+	right: 0;
+	background-color: #4acaa8;
+	width: 25%;
+	height: 100vh;
+}
+
+#pictProfile {
+	display: block;
+	height: 120px;
+	width: 120px;
+	background-image: url('../public/image/auteurPict.jpg');
+	background-size: cover;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-radius: 50%;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+#descriptionAuteur {
+	color: white;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: center;	
+	font-style: italic;
+}
+
+ul {
+	margin-top: 40px;
+	list-style: none;
+	width: 100%;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+	text-align: center;
+}
+
+li:hover {
+	background-color: white;
+	color: #4acaa8;
+}
+
+/*===========================================================HEADER===================================================================*/
+
+#headerImage {
+	width: 75%;
+	margin-top: -40px;
+}
+
+/*===========================================================CONTENT===================================================================*/
+
+h2 {
+	font-size: 3em;
+	color: #4acaa8;
+}
+
+#content {
+	width: 75%;
+	text-align: center;
+}
+
+.posts {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	border: solid 1px #4acaa8;
+}

@@ -1,2 +1,2 @@
 # Project-4
-Project 4 OC - PHP/MySQL
+OC project 4 - Blog d'un ecrivain en PHP/MySQL
