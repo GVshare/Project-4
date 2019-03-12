@@ -24,9 +24,7 @@
 	    </div>
 	    <div>
 	        <input type="text" id="author" name="author" placeholder="Pseudo" />
-	    </div>
-	    <div>
-	        <input type="submit" />
+	        <input type="submit" id="buttonSubmit" value="Envoyer" />
 	    </div>
 	</form>
 	<?php
