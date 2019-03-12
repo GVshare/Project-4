@@ -16,8 +16,19 @@
 
 <div class="comments">
 
-	<h3>Commentaires : </h3>
+	<h3>Laisser un commentaire</h3>
 
+	<form action="index.php" method="post">
+	    <div>
+	        <textarea id="comment" name="comment" placeholder="Entrez votre commentaire..."></textarea>
+	    </div>
+	    <div>
+	        <input type="text" id="author" name="author" placeholder="Pseudo" />
+	    </div>
+	    <div>
+	        <input type="submit" />
+	    </div>
+	</form>
 	<?php
 	while ($comment = $comments->fetch())
 	{
