@@ -22,4 +22,10 @@ function checkInfoValidity($login, $password) {
 		}
 }
 
+function logOut() {
+	unset($_SESSION['status']);
+
+	header('Location: index.php');
+}
+
 ?>

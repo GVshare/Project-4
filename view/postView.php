@@ -42,7 +42,7 @@
 	    if (isset($_SESSION['status'])) {
 	    ?>
 
-	    <p><a href="index.php?action=deleteComment&commentId=<?= $comment['id'] ?>" class="deleteComment">Suprimer</a></p>
+	    <p><a href="index.php?action=deleteComment&commentId=<?= $comment['id'] ?>" class="deleteComment"><i class="fas fa-trash-alt"></i> Supprimer</a></p>
 
 	    <?php
 	    }  

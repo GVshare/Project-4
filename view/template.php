@@ -17,10 +17,21 @@
 
 		<nav>
 			<ul>
-				<a href="index.php"><li>Accueil</li></a>
-				<a href="#"><li>Chapitre 2</li></a>
-				<a href="#"><li>Chapitre 3</li></a>
-				<a href="index.php?action=conectionPage"><li>Espace Administrateur</li></a>
+				<a href="index.php"><li class="navLi">Accueil</li></a>
+				<a href="#"><li class="navLi">Chapitre 2</li></a>
+				<a href="#"><li class="navLi">Chapitre 3</li></a>
+					<?php 
+					if (isset($_SESSION['status'])) {
+					?>
+						<p id="conectedAdminText">Connecté en Administrateur </p>
+						<div id="logOutDiv"><a id="logOut" href='index.php?action=logOut'> -- Log out -- </a></div>
+					<?php
+					} else {
+					?>
+						<a href="index.php?action=conectionPage"><li class="navLi">Espace Administrateur </li></a>
+					<?php
+					}
+					?> 
 			</ul>
 
 		</nav>

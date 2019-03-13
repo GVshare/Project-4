@@ -3,7 +3,6 @@ body {
 	padding: 0;
 }
 
-
 /*===========================================================ASIDE===================================================================*/
 aside {
 	display: block;
@@ -52,7 +51,7 @@ a {
 	text-decoration: none;
 }
 
-li {
+.navLi {
 	width: 100%;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -60,9 +59,28 @@ li {
 	text-align: center;
 }
 
-li:hover {
+.navLi:hover {
 	background-color: white;
 	color: #4acaa8;
+}
+
+#conectedAdminText {
+	color: blue;
+	text-align: center;
+}
+
+#logOut {
+	color: blue;
+}
+
+
+#logOut:hover {
+	color: red;
+}
+
+#logOutDiv {
+	display: flex;
+	justify-content: space-around;
 }
 
 /*===========================================================HEADER===================================================================*/

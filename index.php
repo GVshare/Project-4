@@ -27,6 +27,8 @@ if (isset($_GET['action'])) {
 		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
     		deleteComment($_GET['commentId']);
     	}
+	} elseif ($_GET['action'] === 'logOut') {
+		logOut();
 	}
 
 
