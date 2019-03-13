@@ -133,6 +133,11 @@ textarea {
 	border-top: solid 3px #4acaa8;
 }
 
+.deleteComment {
+	color: red;
+	font-style: italic;
+}
+
 /*====================================================CONECTION PAGE============================================================*/
 
 #buttonConectionAdmin {

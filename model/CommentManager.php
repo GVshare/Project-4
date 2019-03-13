@@ -33,6 +33,27 @@ class CommentManager extends Manager {
 
 	    return $affectedLines;
 	}
+
+	public function deleteComment($commentId) {
+		$db = $this->dbConnect();
+		$req = $db->prepare('DELETE FROM comments WHERE id = ? ');
+        $affectedComment = $req->execute(array($commentId));
+
+        return $affectedComment;
+	}
+
+	public function commentInfos($commentId) {
+		$db = $this->dbConnect();
+        $req = $db->prepare('
+        	SELECT id, idPost, author, comment 
+        	FROM comments 
+        	WHERE id = ?');
+
+        $req->execute(array($commentId));
+        $commentInfos = $req->fetch();
+
+        return $commentInfos;
+	}
 };
 
 ?>

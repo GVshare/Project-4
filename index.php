@@ -23,6 +23,10 @@ if (isset($_GET['action'])) {
 		if (isset($_POST['login']) && isset($_POST['password'])){
             checkInfoValidity($_POST['login'],$_POST['password']);
         }
+	} elseif ($_GET['action'] === 'deleteComment') {
+		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
+    		deleteComment($_GET['commentId']);
+    	}
 	}
 
 

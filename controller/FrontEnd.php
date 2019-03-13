@@ -37,4 +37,16 @@ function addComment($postId, $author, $comment) {
     };
 };
 
+// Delete a comment
+function deleteComment($commentId) {
+
+    $commentManager = new CommentManager();
+
+    $infoComment = $commentManager->commentInfos($commentId);
+
+    $affectedComment = $commentManager->deleteComment($commentId);
+
+    header('location: index.php?action=post&id=' . $infoComment['idPost']);
+}
+
 ?>

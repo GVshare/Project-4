@@ -38,11 +38,11 @@
 	
 		<?php
 
-		// <!-- Add the commands to delete a comment -->
+		// <!-- Add the commands to delete a comment if loged as Admin-->
 	    if (isset($_SESSION['status'])) {
 	    ?>
 
-	    <p>Suprimer</p>
+	    <p><a href="index.php?action=deleteComment&commentId=<?= $comment['id'] ?>" class="deleteComment">Suprimer</a></p>
 
 	    <?php
 	    }  
