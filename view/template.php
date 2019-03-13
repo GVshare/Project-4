@@ -17,7 +17,7 @@
 
 		<nav>
 			<ul>
-				<a href="#"><li>Chapitre 1</li></a>
+				<a href="index.php"><li>Accueil</li></a>
 				<a href="#"><li>Chapitre 2</li></a>
 				<a href="#"><li>Chapitre 3</li></a>
 				<a href="index.php?action=conectionPage"><li>Espace Administrateur</li></a>

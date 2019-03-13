@@ -35,7 +35,17 @@
 	    <p><strong><?= htmlspecialchars($comment['author']) ?> le <?= $comment['commentDateFr'] ?></strong></p>
 	    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
 	    </div>
-	<?php
+	
+		<?php
+
+		// <!-- Add the commands to delete a comment -->
+	    if (isset($_SESSION['status'])) {
+	    ?>
+
+	    <p>Suprimer</p>
+
+	    <?php
+	    }  
 	}
 	?>
 </div>

@@ -132,3 +132,16 @@ textarea {
 	font-style: italic;
 	border-top: solid 3px #4acaa8;
 }
+
+/*====================================================CONECTION PAGE============================================================*/
+
+#buttonConectionAdmin {
+	margin-top: 40px;
+	width: 30%;
+	height: 6vh;
+	border-radius: 20px;
+	background-color: #4acaa8;
+	color: white;
+	font-size: 1.5em;
+	font-weight: bold;
+}
