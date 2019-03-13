@@ -18,13 +18,13 @@
 
 	<h3>Laisser un commentaire</h3>
 
-	<form action="index.php" method="post">
+	<form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
 	    <div>
 	        <textarea id="comment" name="comment" placeholder="Entrez votre commentaire..."></textarea>
 	    </div>
 	    <div>
 	        <input type="text" id="author" name="author" placeholder="Pseudo" />
-	        <input type="submit" id="buttonSubmit" value="Envoyer" />
+	        <input type="submit" id="buttonSubmit" value="Envoyer" /> <br><br>
 	    </div>
 	</form>
 	<?php
