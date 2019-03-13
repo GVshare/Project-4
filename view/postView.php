@@ -9,7 +9,7 @@
         <em>le <?= $post['commentDateFr'] ?></em>
     </h3>
     
-    <p>
+    <p class="textPost">
         <?= nl2br(htmlspecialchars($post['content'])) ?>
     </p>
 </div>
@@ -24,15 +24,17 @@
 	    </div>
 	    <div>
 	        <input type="text" id="author" name="author" placeholder="Pseudo" />
-	        <input type="submit" id="buttonSubmit" value="Envoyer" /> <br><br>
+	        <input type="submit" id="buttonSubmit" value="Envoyer" /> <br><br><br>
 	    </div>
 	</form>
 	<?php
 	while ($comment = $comments->fetch())
 	{
 	?>
+		<div class="newComment">
 	    <p><strong><?= htmlspecialchars($comment['author']) ?> le <?= $comment['commentDateFr'] ?></strong></p>
 	    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+	    </div>
 	<?php
 	}
 	?>

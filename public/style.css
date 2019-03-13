@@ -94,6 +94,11 @@ h2 {
 	border: solid 1px #4acaa8;
 }
 
+.textPost {
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
 form {
 	margin-left: auto;
 	margin-right: auto;
@@ -120,4 +125,10 @@ textarea {
 	background-color: #4acaa8;
 	color: white;
 	font-weight: bold;
+}
+
+.newComment {
+	color: #777;
+	font-style: italic;
+	border-top: solid 3px #4acaa8;
 }
