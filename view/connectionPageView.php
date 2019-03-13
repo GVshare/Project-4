@@ -9,7 +9,7 @@
 	<label>Password</label>
 	<input type="password" name="password"><br>
 
-	<input type="submit" name="submitButton" value="Log In" id="buttonConectionAdmin">
+	<input type="submit" name="submitButton" value="Log In" id="buttonConnectionAdmin">
 </form>
 
 

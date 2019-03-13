@@ -1,14 +1,14 @@
 <?php  
 session_start();
-require_once('model/ConectionManager.php');
+require_once('model/ConnectionManager.php');
 
-function conectionPageOpen() {
-	require('view/conectionPageView.php');
+function connectionPageOpen() {
+	require('view/connectionPageView.php');
 }
 
 function checkInfoValidity($login, $password) {	 
-	$conection = new ConectionManager();
-    $result = $conection->getUserInfo($login, $password);
+	$connection = new ConnectionManager();
+    $result = $connection->getUserInfo($login, $password);
 	$checkPassword = $password === $result['password'];
 	
 		if ($checkPassword) {
@@ -18,7 +18,7 @@ function checkInfoValidity($login, $password) {
 		}
 		else {
 			echo "mauvais mot de passe <br><br>";
-			echo "<a href='index.php?action=conectionPage'>Back</a>";
+			echo "<a href='index.php?action=connectionPage'>Back</a>";
 		}
 }
 

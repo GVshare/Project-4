@@ -2,7 +2,7 @@
 
 require_once("model/Manager.php");
 
-class ConectionManager extends Manager {
+class ConnectionManager extends Manager {
 
 	public function getUserInfo($login, $password) {
 

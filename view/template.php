@@ -23,12 +23,12 @@
 					<?php 
 					if (isset($_SESSION['status'])) {
 					?>
-						<p id="conectedAdminText">Connecté en Administrateur </p>
+						<p id="connectedAdminText">Connecté en Administrateur </p>
 						<div id="logOutDiv"><a id="logOut" href='index.php?action=logOut'> -- Log out -- </a></div>
 					<?php
 					} else {
 					?>
-						<a href="index.php?action=conectionPage"><li class="navLi">Espace Administrateur </li></a>
+						<a href="index.php?action=connectionPage"><li class="navLi">Espace Administrateur </li></a>
 					<?php
 					}
 					?> 

@@ -1,7 +1,7 @@
 <?php  
 
 require 'controller/FrontEnd.php';
-require 'controller/Conection.php';
+require 'controller/Connection.php';
 
 if (isset($_GET['action'])) {
 	if ($_GET['action'] === 'post') {
@@ -16,8 +16,8 @@ if (isset($_GET['action'])) {
         	}
 		}
 
-	} elseif ($_GET['action'] === 'conectionPage') {
-		conectionPageOpen();
+	} elseif ($_GET['action'] === 'connectionPage') {
+		connectionPageOpen();
 
 	} elseif ($_GET['action'] === 'checkUserInfo') {
 		if (isset($_POST['login']) && isset($_POST['password'])){
