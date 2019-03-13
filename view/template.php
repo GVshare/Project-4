@@ -20,7 +20,7 @@
 				<a href="#"><li>Chapitre 1</li></a>
 				<a href="#"><li>Chapitre 2</li></a>
 				<a href="#"><li>Chapitre 3</li></a>
-				<a href="#"><li>Espace Administrateur</li></a>
+				<a href="index.php?action=conectionPage"><li>Espace Administrateur</li></a>
 			</ul>
 
 		</nav>

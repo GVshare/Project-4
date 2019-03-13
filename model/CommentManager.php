@@ -1,9 +1,11 @@
-<?php  
+<!-- THE MODEL IS PICKING THE INFORMATIONS IN THE DATABASE AND SENDING TO THE CONTROLLER -->
 
+<?php  
+// Get the database
 require_once("model/Manager.php");
 
 class CommentManager extends Manager {
-
+	
 	public function getComments($postId){
 
 	    $db = $this->dbConnect();
