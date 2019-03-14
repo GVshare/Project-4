@@ -38,7 +38,7 @@
 	    <?php 
 	    if (!isset($_SESSION['status'])) {
 	    ?>
-	    	<p><a href="index.php?action=reportComment&commentId=<?= $comment['id'] ?>" class="reportComment"><i class="fas fa-trash-alt"></i> Report</a></p>
+	    	<p><a href="index.php?action=reportComment&commentId=<?= $comment['id'] ?>" class="reportComment"><i class="fas fa-exclamation-triangle"></i> Report</a></p>
 	    <?php
 	    } 
 	    ?>

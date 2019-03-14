@@ -156,6 +156,11 @@ textarea {
 	font-style: italic;
 }
 
+.reportComment {
+	color: orange;
+	font-style: italic;
+}
+
 /*====================================================CONECTION PAGE============================================================*/
 
 #buttonConnectionAdmin {
