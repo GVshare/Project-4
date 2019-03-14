@@ -8,6 +8,9 @@ function adminBoardOpen() {
 }
 
 function adminCommentsOpen() {
+	$commentManager = new CommentManager();
+	$comments = $commentManager->getAllComments();
+	$reportedComments = $commentManager->getReportedComments();
 	require('view/adminComments.php');
 }
 

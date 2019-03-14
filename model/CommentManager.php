@@ -22,7 +22,36 @@ class CommentManager extends Manager {
 	    return $comments;
 	}
 
-	public function postComment($postId, $author, $comment){
+	public function getAllComments() {
+
+	    $db = $this->dbConnect();
+
+	    $comments = $db->prepare('
+	    	SELECT id, idPost, author, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr 
+	    	FROM comments 
+	    	ORDER BY commentDate DESC'
+	    );	
+
+	    $comments->execute();
+
+	    return $comments;
+	}
+
+	public function getReportedComments() {
+		$db = $this->dbConnect();
+
+		$reportedComments = $db->prepare('
+			SELECT id, idPost, reported, author, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr 
+			FROM comments
+			WHERE reported = 1 '
+		);
+
+		$reportedComments->execute();
+
+		return $reportedComments;
+	}
+
+	public function postComment($postId, $author, $comment) {
 
 	    $db = $this->dbConnect();
 	    $comments = $db->prepare('
