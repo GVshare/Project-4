@@ -2,6 +2,7 @@
 
 require 'controller/FrontEnd.php';
 require 'controller/Connection.php';
+require 'controller/BackEnd.php';
 
 if (isset($_GET['action'])) {
 	if ($_GET['action'] === 'post') {
@@ -29,6 +30,27 @@ if (isset($_GET['action'])) {
     	}
 	} elseif ($_GET['action'] === 'logOut') {
 		logOut();
+
+	} elseif ($_GET['action'] === 'adminBoard')  {
+		if (isset($_SESSION['status'])) {
+			adminBoardOpen();
+		} else {
+			connectionPageOpen();
+		}
+
+	} elseif ($_GET['action'] === 'adminComments') {
+		if (isset($_SESSION['status'])) {
+			adminCommentsOpen();
+		} else {
+			connectionPageOpen();
+		}
+
+	} elseif ($_GET['action'] === 'adminPosts') {
+		if (isset($_SESSION['status'])) {
+			adminPostsOpen();
+		} else {
+			connectionPageOpen();
+		}
 	}
 
 

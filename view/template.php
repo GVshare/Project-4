@@ -16,10 +16,20 @@
 		<p id="descriptionAuteur">Je suis un auteur alcoholique tout pourrit en train d'éssayer d'écrire un blog car écrire sur papier c est demodé...</p>
 
 		<nav>
-			<ul>
+			<ul>	
 				<a href="index.php"><li class="navLi">Accueil</li></a>
-				<a href="#"><li class="navLi">Chapitre 2</li></a>
-				<a href="#"><li class="navLi">Chapitre 3</li></a>
+					<?php  
+					if (isset($_SESSION['status'])) {
+					?>
+						<a href="index.php?action=adminBoard"><li class="navLi">Accueil Admin</li></a>
+					<?php
+					} else {
+					?>
+						<a href="#/"><li class="navLi">Contacts</li></a>
+					<?php 
+					} 
+					?>
+				
 					<?php 
 					if (isset($_SESSION['status'])) {
 					?>

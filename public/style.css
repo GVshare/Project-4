@@ -168,3 +168,28 @@ textarea {
 	font-size: 1.5em;
 	font-weight: bold;
 }
+
+/*====================================================ADMINISTRATOR BOARD=======================================================*/
+
+#boardAdmin {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.managers {
+	background-color: #4acaa8;
+	color: white;
+	width: 30%;
+	border-radius: 20px;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.managers:hover {
+	background-color: white;
+	color: #4acaa8;
+	border: 1px solid #4acaa8;
+}
