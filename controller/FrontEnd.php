@@ -49,4 +49,14 @@ function deleteComment($commentId) {
     header('location: index.php?action=post&id=' . $infoComment['idPost']);
 }
 
+function reportComment($commentId) {
+    $commentManager = new CommentManager();
+
+    $infoComment = $commentManager->commentInfos($commentId);
+
+    $affectedComment = $commentManager->reportComment($commentId);
+
+    header('location: index.php?action=post&id=' . $infoComment['idPost']);
+}
+
 ?>

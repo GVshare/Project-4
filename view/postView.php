@@ -35,7 +35,7 @@
 	    <p><strong><?= htmlspecialchars($comment['author']) ?> le <?= $comment['commentDateFr'] ?></strong></p>
 	    <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
 	    </div>
-	
+		<p><a href="index.php?action=reportComment&commentId=<?= $comment['id'] ?>" class="reportComment"><i class="fas fa-trash-alt"></i> Report</a></p>
 		<?php
 
 		// <!-- Add the commands to delete a comment if loged as Admin-->

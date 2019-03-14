@@ -63,6 +63,18 @@ class CommentManager extends Manager {
 	    return $affectedLines;
 	}
 
+	public function reportComment($commentId) {
+
+		$db = $this->dbConnect();
+		$comment = $db->prepare('
+			UPDATE comments 
+			SET reported = 1
+			WHERE id = ? '
+		);
+
+		$comment->execute(array($commentId));
+	}
+
 	public function deleteComment($commentId) {
 		$db = $this->dbConnect();
 		$req = $db->prepare('DELETE FROM comments WHERE id = ? ');
