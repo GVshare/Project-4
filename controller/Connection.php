@@ -14,7 +14,7 @@ function checkInfoValidity($login, $password) {
 		if ($checkPassword) {
 			$_SESSION['status'] = "Admin";
 
-			header('Location: index.php');
+			header('Location: index.php?action=adminBoard');
 		}
 		else {
 			echo "mauvais mot de passe <br><br>";
