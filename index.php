@@ -30,6 +30,11 @@ if (isset($_GET['action'])) {
     		deleteComment($_GET['commentId']);
     	}
 
+    } elseif ($_GET['action'] === 'adminDeleteComment') {
+		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
+    		adminDeleteComment($_GET['commentId']);
+    	}
+
     } elseif ($_GET['action'] === 'reportComment') {
 		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
     		reportComment($_GET['commentId']);

@@ -19,7 +19,7 @@ while ($reportedComment = $reportedComments->fetch())
     if (isset($_SESSION['status'])) {
     ?>
 
-    <p><a href="index.php?action=adminComments" class="deleteComment"><i class="fas fa-trash-alt"></i> Supprimer</a></p>
+    <p><a href="index.php?action=adminDeleteComment&commentId=<?= $reportedComment['id'] ?>" class="deleteComment"><i class="fas fa-trash-alt"></i> Supprimer</a></p>
 
     <?php
     }  
@@ -43,7 +43,7 @@ while ($comment = $comments->fetch())
     if (isset($_SESSION['status'])) {
     ?>
 
-    <p><a href="index.php?action=adminComments" class="deleteComment"><i class="fas fa-trash-alt"></i> Supprimer</a></p>
+    <p><a href="index.php?action=adminDeleteComment&commentId=<?= $comment['id'] ?>" class="deleteComment"><i class="fas fa-trash-alt"></i> Supprimer</a></p>
 
     <?php
     }  
