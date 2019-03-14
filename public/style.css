@@ -198,3 +198,30 @@ textarea {
 	color: #4acaa8;
 	border: 1px solid #4acaa8;
 }
+
+
+/*=================================================ADMINISTRATOR COMMENTS=====================================================*/
+
+#reportedCommentTitle {
+	background-color: red;
+	color: white;
+	line-height: 2em;
+}
+
+#latestCommentTitle {
+	background-color: green;
+	color: white;
+	line-height: 2em;
+}
+
+.deleteComments {	
+	color: red;
+}
+
+.commentsAdminList {
+	border-bottom: dashed 1px black;
+}
+
+.approveComments {
+	color: green;
+}

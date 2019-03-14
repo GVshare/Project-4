@@ -60,6 +60,17 @@ function adminDeleteComment($commentId) {
     header('location: index.php?action=adminComments');
 }
 
+function adminApproveComment($commentId) {
+
+    $commentManager = new CommentManager();
+
+    $infoComment = $commentManager->commentInfos($commentId);
+
+    $affectedComment = $commentManager->approveComment($commentId);
+
+    header('location: index.php?action=adminComments');
+}
+
 function reportComment($commentId) {
     $commentManager = new CommentManager();
 
