@@ -38,9 +38,21 @@ class PostManager extends Manager {
 			DELETE FROM posts 
 			WHERE id = ? '
 		);
-        $affectedComment = $req->execute(array($postId));
+    $affectedComment = $req->execute(array($postId));
 
-        return $affectedPost;
+    return $affectedPost;
+	}
+
+	public function modifyPostContent($postId , $postContent) {
+		$db = $this->dbConnect();
+		$req = $db->prepare('
+		UPDATE `posts` 
+		SET content = ? 
+		WHERE id = ?'
+		);
+	$affectedPost = $req->execute(array($postContent , $postId));
+
+       return $affectedPost;	
 	}
 };
 

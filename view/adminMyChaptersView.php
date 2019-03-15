@@ -16,7 +16,7 @@ while ($data = $post->fetch())
     <p>
         <a href="index.php?action=post&id=<?= $data['id']?>" class="readChapter"><i class="far fa-eye"></i> Voir</a> 
         || 
-        <a href="#/" class="modifyChapter"><i class="fas fa-pen-fancy"></i> Modifier</a> 
+        <a href="index.php?action=adminModifyChapter&postId=<?= $data['id'] ?>" class="modifyChapter"><i class="fas fa-pen-fancy"></i> Modifier</a> 
         || 
         <a href="index.php?action=adminDeleteChapter&postId=<?= $data['id'] ?>" class="deleteChapter"><i class="fas fa-trash-alt"></i> Supprimer</a>
     </p>

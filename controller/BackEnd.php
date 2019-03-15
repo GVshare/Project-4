@@ -59,4 +59,19 @@ function adminDeleteChapter($postId) {
     header('location: index.php?action=adminChapterView');
 }
 
+function adminModifyChapterOpen() {
+    $postManager = new PostManager();
+    
+    $post = $postManager->getPost($_GET['postId']);
+
+    require('view/adminModifyChapterView.php');
+}
+
+function adminModifyChapter($postId , $postContent) {
+    $postManager = new PostManager();
+    
+    $post = $postManager->modifyPostContent($postId , $postContent);
+
+    header('location: index.php?action=post&id='.$postId);
+}
 ?>

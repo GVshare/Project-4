@@ -95,6 +95,24 @@ if (isset($_GET['action'])) {
 		} else {
 			connectionPageOpen();
 		}
+
+	} elseif ($_GET['action'] === 'adminModifyChapter') {
+		if (isset($_SESSION['status'])) {
+			if (isset($_GET['postId']) && $_GET['postId'] > 0) {
+			adminModifyChapterOpen();
+			}
+		} else {
+			connectionPageOpen();
+		}
+
+	} elseif ($_GET['action'] === 'modifyPost') {
+		if (isset($_SESSION['status'])) {
+			if (isset($_GET['postId']) && $_GET['postId'] > 0) {
+			adminModifyChapter($_GET['postId'] , $_POST['updatePostContent']);
+			}
+		} else {
+			connectionPageOpen();
+		}
 	}
 
 

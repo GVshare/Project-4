@@ -5,12 +5,12 @@
 
 <div class="post">
     <h3>
-        <?= htmlspecialchars($post['title']) ?>
+        <?= $post['title'] ?>
         <em>le <?= $post['commentDateFr'] ?></em>
     </h3>
     
     <p class="textPost">
-        <?= nl2br(htmlspecialchars($post['content'])) ?>
+        <?= nl2br($post['content']) ?>
     </p>
 </div>
 

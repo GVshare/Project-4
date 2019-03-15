@@ -248,3 +248,21 @@ textarea {
 .deleteChapter {
 	color: red;
 }
+
+/*============================================ADMINISTRATOR MODIFY CHAPTERS===================================================*/
+
+#updateButton {
+	margin-bottom: 40px;
+	width: 30%;
+	height: 6vh;
+	border-radius: 20px;
+	background-color: #4acaa8;
+	color: white;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.post p, .posts p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
