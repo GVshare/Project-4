@@ -9,7 +9,7 @@ function connectionPageOpen() {
 function checkInfoValidity($login, $password) {	 
 	$connection = new ConnectionManager();
     $result = $connection->getUserInfo($login, $password);
-	$checkPassword = SHA1($password) === $result['password'];
+	$checkPassword = password_verify($password , $result['password']);
 	
 		if ($checkPassword) {
 			$_SESSION['status'] = "Admin";
