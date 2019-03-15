@@ -17,7 +17,7 @@
 
 		<nav>
 			<ul>	
-				<a href="index.php"><li class="navLi">Accueil</li></a>
+				<a href="index.php"><li class="navLi">Accueil Readers</li></a>
 					<?php  
 					if (isset($_SESSION['status'])) {
 					?>
@@ -61,6 +61,6 @@
 	<?= $content ?>
 
 	</section>
-
+<script type="text/javascript" src="public/projet4.js"></script>
 </body>
 </html>

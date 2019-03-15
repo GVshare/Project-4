@@ -49,28 +49,6 @@ function deleteComment($commentId) {
     header('location: index.php?action=post&id=' . $infoComment['idPost']);
 }
 
-function adminDeleteComment($commentId) {
-
-    $commentManager = new CommentManager();
-
-    $infoComment = $commentManager->commentInfos($commentId);
-
-    $affectedComment = $commentManager->deleteComment($commentId);
-
-    header('location: index.php?action=adminComments');
-}
-
-function adminApproveComment($commentId) {
-
-    $commentManager = new CommentManager();
-
-    $infoComment = $commentManager->commentInfos($commentId);
-
-    $affectedComment = $commentManager->approveComment($commentId);
-
-    header('location: index.php?action=adminComments');
-}
-
 function reportComment($commentId) {
     $commentManager = new CommentManager();
 

@@ -5,10 +5,9 @@
 <h3 id="reportedCommentTitle"><i class="fas fa-exclamation-triangle"></i> Reported comments <i class="fas fa-exclamation-triangle"></i></h3>
 
 <?php
-while ($reportedComment = $reportedComments->fetch())
-{
+while ($reportedComment = $reportedComments->fetch()) {   
 ?>
-	<div class="commentsAdminList">
+	<div class="commentsReportedAdminList">
     <p><strong><?= htmlspecialchars($reportedComment['author']) ?> le <?= $reportedComment['commentDateFr'] ?></strong></p>
     <p><?= nl2br(htmlspecialchars($reportedComment['comment'])) ?></p>
     

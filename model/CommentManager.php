@@ -11,7 +11,7 @@ class CommentManager extends Manager {
 	    $db = $this->dbConnect();
 
 	    $comments = $db->prepare('
-	    	SELECT id, author, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr 
+	    	SELECT id, upper(author) AS author, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr 
 	    	FROM comments 
 	    	WHERE idPost = ? 
 	    	ORDER BY commentDate DESC'
@@ -27,7 +27,7 @@ class CommentManager extends Manager {
 	    $db = $this->dbConnect();
 
 	    $comments = $db->prepare('
-	    	SELECT id, idPost, author, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr 
+	    	SELECT id, idPost, upper(author) AS author, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr 
 	    	FROM comments 
 	    	ORDER BY commentDate DESC'
 	    );	
@@ -41,7 +41,7 @@ class CommentManager extends Manager {
 		$db = $this->dbConnect();
 
 		$reportedComments = $db->prepare('
-			SELECT id, idPost, reported, author, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr 
+			SELECT id, idPost, reported, upper(author) AS author, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr 
 			FROM comments
 			WHERE reported = 1 '
 		);
