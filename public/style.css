@@ -156,8 +156,13 @@ textarea {
 	font-style: italic;
 }
 
-.reportComment {
+.unReportedComment {
 	color: orange;
+	font-style: italic;
+}
+
+.reportedComment {
+	color: red;
 	font-style: italic;
 }
 

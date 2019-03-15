@@ -27,6 +27,8 @@
 	        <input type="submit" id="buttonSubmit" value="Envoyer" /> <br><br><br>
 	    </div>
 	</form>
+	
+	<!-- FOR EACH ROW OF THE TABLE COMMENTS CREATE THE COMMENT WITH AUTHOR, DATE, COMMENT.... -->
 	<?php
 	while ($comment = $comments->fetch())
 	{
@@ -38,13 +40,24 @@
 	    <?php 
 	    if (!isset($_SESSION['status'])) {
 	    ?>
-	    	<p><a href="index.php?action=reportComment&commentId=<?= $comment['id'] ?>" class="reportComment"><i class="fas fa-exclamation-triangle"></i> Report</a></p>
+	    	<!-- CODE THAT TURN THE REPORT BUTTON TO REPORTED AND CHANGE COLOR TO RED IF THE COMMENT HAS BEEN REPORTED -->
+	    	<?php  
+	    	if ($comment['reported'] == TRUE) {
+	    	?>
+	    		<p><a href="index.php?action=reportComment&commentId=<?= $comment['id'] ?>" class="reportedComment" ><i class="fas fa-exclamation-triangle"></i> Reported</a></p>
+	    	<?php
+	    	} else {
+	    	?>
+	    		<p><a href="index.php?action=reportComment&commentId=<?= $comment['id'] ?>" class="unReportedComment" ><i class="fas fa-exclamation-triangle"></i> Report</a></p>
+	    	<?php 
+	    	} 
+	    	?>
 	    <?php
 	    } 
 	    ?>
 		<?php
 
-		// <!-- Add the commands to delete a comment if loged as Admin-->
+		// <!--ADD THE COMMANDS TO DELETE A COMMENT IF LOGGED AS ADMIN-->
 	    if (isset($_SESSION['status'])) {
 	    ?>
 
