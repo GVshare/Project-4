@@ -41,4 +41,22 @@ function adminApproveComment($commentId) {
     header('location: index.php?action=adminComments');
 }
 
+function adminMyChapterOpen() {
+    $postManager = new PostManager();
+
+    $post = $postManager->getPosts();
+
+    require('view/adminMyChaptersView.php');
+}
+
+function adminDeleteChapter($postId) {
+    $postManager = new PostManager();
+
+    $infoPost = $postManager->getPost($postId);
+
+    $affectedPost = $postManager->deletePost($postId);
+
+    header('location: index.php?action=adminChapterView');
+}
+
 ?>

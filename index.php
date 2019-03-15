@@ -5,6 +5,9 @@ require 'controller/Connection.php';
 require 'controller/BackEnd.php';
 
 if (isset($_GET['action'])) {
+
+	// ================================================= READERS ===========================================================
+	
 	if ($_GET['action'] === 'post') {
 		if (isset($_GET['id']) && $_GET['id'] > 0) {
     		postView();
@@ -17,6 +20,18 @@ if (isset($_GET['action'])) {
         	}
 		}
 
+	} elseif ($_GET['action'] === 'reportComment') {
+		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
+    		reportComment($_GET['commentId']);
+    	}
+
+	} elseif ($_GET['action'] === 'deleteComment') {
+		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
+    		deleteComment($_GET['commentId']);
+    	}
+
+	// ================================================ CONNECTION ==========================================================
+
 	} elseif ($_GET['action'] === 'connectionPage') {
 		connectionPageOpen();
 
@@ -25,28 +40,24 @@ if (isset($_GET['action'])) {
             checkInfoValidity($_POST['login'],$_POST['password']);
         }
 
-	} elseif ($_GET['action'] === 'deleteComment') {
-		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
-    		deleteComment($_GET['commentId']);
-    	}
+    } elseif ($_GET['action'] === 'logOut') {
+		logOut();
+
+    // =============================================== ADMINISTRATOR ========================================================
 
     } elseif ($_GET['action'] === 'adminDeleteComment') {
 		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
     		adminDeleteComment($_GET['commentId']);
-    	}
+    	} else {
+			connectionPageOpen();
+		}
 
     } elseif ($_GET['action'] === 'adminApproveComment') {
 		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
     		adminApproveComment($_GET['commentId']);
-    	}
-
-    } elseif ($_GET['action'] === 'reportComment') {
-		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
-    		reportComment($_GET['commentId']);
-    	}
-
-	} elseif ($_GET['action'] === 'logOut') {
-		logOut();
+    	} else {
+			connectionPageOpen();
+		}
 
 	} elseif ($_GET['action'] === 'adminBoard')  {
 		if (isset($_SESSION['status'])) {
@@ -65,6 +76,22 @@ if (isset($_GET['action'])) {
 	} elseif ($_GET['action'] === 'adminPosts') {
 		if (isset($_SESSION['status'])) {
 			adminPostsOpen();
+		} else {
+			connectionPageOpen();
+		}
+
+	} elseif ($_GET['action'] === 'adminChapterView') {
+		if (isset($_SESSION['status'])) {
+			adminMyChapterOpen();
+		} else {
+			connectionPageOpen();
+		}
+
+	} elseif ($_GET['action'] === 'adminDeleteChapter') {
+		if (isset($_SESSION['status'])) {
+			if (isset($_GET['postId']) && $_GET['postId'] > 0) {
+			adminDeleteChapter($_GET['postId']);
+			}
 		} else {
 			connectionPageOpen();
 		}

@@ -231,3 +231,20 @@ textarea {
 	color: green;
 }
 
+/*=================================================ADMINISTRATOR CHAPTERS====================================================*/
+
+.adminChaptersList {
+	border-top: dashed 1px black;
+}
+
+.readChapter {
+	color: blue;
+}
+
+.modifyChapter {
+	color: green;
+}
+
+.deleteChapter {
+	color: red;
+}

@@ -4,7 +4,7 @@
 
 <div id="boardAdmin">
 	<a href="#/" class="managers"><div >NOUVEAU CHAPITRE</div></a>
-	<a href="#/" class="managers"><div >MES CHAPITRES</div> </a>
+	<a href="index.php?action=adminChapterView" class="managers"><div >MES CHAPITRES</div> </a>
 </div>
 
 <?php $content = ob_get_clean(); ?>
