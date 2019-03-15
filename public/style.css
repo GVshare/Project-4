@@ -218,7 +218,7 @@ textarea {
 	color: red;
 }
 
-.commentsAdminList, .commentReportedAdminList {
+.commentsAdminList, .commentsReportedAdminList {
 	border-bottom: dashed 1px black;
 }
 
