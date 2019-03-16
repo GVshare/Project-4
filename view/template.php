@@ -15,8 +15,10 @@
 	<aside>
 		<div id="pictProfile"></div>
 
-		<h1>Auteur Tout Pourrit !</h1>
-		<p id="descriptionAuteur">Je suis un auteur alcoholique tout pourrit en train d'éssayer d'écrire un blog car écrire sur papier c est demodé...</p>
+		<h1>Jean Forteroche</h1>
+		<p id="descriptionAuteur">"Et revoici, avec Billet simple pour l'Alaska", notre maître du polar, Jean Forteroche, l'un des pionniers du Blog des livres qui depaint sont long voyage de la France à l'Alaska en passant par le Mexique. 
+		...Accrochez vous!
+		</p>	
 
 		<nav>
 			<ul>	

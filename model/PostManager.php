@@ -47,7 +47,7 @@ class PostManager extends Manager {
 		$db = $this->dbConnect();
 		$req = $db->prepare('
 		UPDATE `posts` 
-		SET content = ? , title = ? , commentDate = NOW()
+		SET content = ? , title = ?
 		WHERE id = ?'
 		);
 	$affectedPost = $req->execute(array($postContent , $postTitle , $postId));

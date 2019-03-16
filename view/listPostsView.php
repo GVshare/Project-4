@@ -1,7 +1,6 @@
 <?php ob_start(); ?>
 
-<h2>Mon super blog ! Ou pas...</h2>
-<p>Derniers articles du blog :</p>
+<h2>Billet simple pour l'Alaska</h2>
 
 <?php
 while ($data = $post->fetch())
