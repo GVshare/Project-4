@@ -9,7 +9,7 @@ while ($data = $post->fetch())
 ?>
 <div class="posts">
     <h3>
-        <p><a href="index.php?action=post&id=<?php echo $data['id']?>"><?php echo htmlspecialchars($data['title']); ?></a></p>
+        <p><a href="index.php?action=post&id=<?php echo $data['id']?>"><?php echo $data['title']?></a></p>
     </h3>
     
     <p><?php echo nl2br(substr($data['content'], 0, 400));?></p><br>

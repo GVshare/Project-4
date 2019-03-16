@@ -13,7 +13,7 @@ class ConnectionManager extends Manager {
 			FROM users 
 			WHERE login = ?');
 
-		$req->execute(array($login));
+		$req->execute(array(htmlspecialchars($login)));
 
 		$result = $req->fetch();
 

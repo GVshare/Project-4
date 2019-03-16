@@ -20,11 +20,11 @@
 
 		<nav>
 			<ul>	
-				<a href="index.php"><li class="navLi">Accueil Readers</li></a>
+				<a href="index.php"><li class="navLi">Accueil</li></a>
 					<?php  
 					if (isset($_SESSION['status'])) {
 					?>
-						<a href="index.php?action=adminBoard"><li class="navLi">Accueil Admin</li></a>
+						<a href="index.php?action=adminBoard"><li class="navLi">Administrator Board</li></a>
 					<?php
 					} else {
 					?>
@@ -32,7 +32,20 @@
 					<?php 
 					} 
 					?>
-				
+					<?php  
+					if (isset($_SESSION['status'])) {
+					?>
+						<a href="index.php?action=adminPosts"><li class="navLi">Mes Chapitres</li></a>
+					<?php
+					} 
+					?>
+					<?php  
+					if (isset($_SESSION['status'])) {
+					?>
+						<a href="index.php?action=adminComments"><li class="navLi">Mes Commentaires</li></a>
+					<?php
+					} 
+					?>
 					<?php 
 					if (isset($_SESSION['status'])) {
 					?>

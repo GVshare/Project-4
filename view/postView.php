@@ -1,13 +1,9 @@
 <?php ob_start(); ?>
 
-<h1>Mon super blog ! Ou pas...</h1>
-<p><a href="index.php">Retour à la liste des billets</a></p>
-
 <div class="post">
-    <h3>
+    <h2>
         <?= $post['title'] ?>
-        <em>le <?= $post['commentDateFr'] ?></em>
-    </h3>
+    </h2>
     
     <p class="textPost">
         <?= nl2br($post['content']) ?>

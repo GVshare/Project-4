@@ -67,10 +67,10 @@ function adminModifyChapterOpen() {
     require('view/adminModifyChapterView.php');
 }
 
-function adminModifyChapter($postId , $postContent) {
+function adminModifyChapter($postId , $postContent , $postTitle) {
     $postManager = new PostManager();
     
-    $post = $postManager->modifyPostContent($postId , $postContent);
+    $post = $postManager->modifyPostContent($postId , $postContent , $postTitle);
 
     header('location: index.php?action=post&id='.$postId);
 }

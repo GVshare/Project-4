@@ -40,7 +40,6 @@ h1 {
 }
 
 ul {
-	margin-top: 40px;
 	list-style: none;
 	width: 100%;
 	margin-left: 0;
@@ -265,4 +264,8 @@ textarea {
 .post p, .posts p {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+.title {
+	font-size: 2em;
 }

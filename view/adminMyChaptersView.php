@@ -8,7 +8,7 @@ while ($data = $post->fetch())
 ?>
 <div class="adminChaptersList">
     <h3>
-        <p><a href="index.php?action=post&id=<?php echo $data['id']?>"><?php echo htmlspecialchars($data['title']); ?></a></p>
+        <p><?php echo $data['title']; ?></p>
     </h3>
     
     <em><?php echo '<i class="fas fa-user"></i> ' . $data['author'] . "&emsp;" . ' <i class="fas fa-calendar-alt"></i> ' . $data['commentDateFr']; ?></em>

@@ -4,7 +4,10 @@
 
 <form method="POST" action="index.php?action=modifyPost&postId=<?= $post['id'] ?>">
 
-    <input type="submit" value="Update" id="updateButton">
+    <input type="submit" value="Update" id="updateButton"><br>
+
+    <label class="title" >New Title : </label>
+    <input class="title" type="text" name="updatePostTitle" value="<?= $post['title']?>"><br><br>
 
     <textarea id="test" name="updatePostContent">
         <?= $post['content'];  ?>

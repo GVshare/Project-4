@@ -37,7 +37,7 @@ if (isset($_GET['action'])) {
 
 	} elseif ($_GET['action'] === 'checkUserInfo') {
 		if (isset($_POST['login']) && isset($_POST['password'])){
-            checkInfoValidity($_POST['login'],$_POST['password']);
+            checkInfoValidity(htmlspecialchars($_POST['login']) , htmlspecialchars($_POST['password']));
         }
 
     } elseif ($_GET['action'] === 'logOut') {
@@ -108,7 +108,7 @@ if (isset($_GET['action'])) {
 	} elseif ($_GET['action'] === 'modifyPost') {
 		if (isset($_SESSION['status'])) {
 			if (isset($_GET['postId']) && $_GET['postId'] > 0) {
-			adminModifyChapter($_GET['postId'] , $_POST['updatePostContent']);
+				adminModifyChapter($_GET['postId'] , $_POST['updatePostContent'] , $_POST['updatePostTitle']);
 			}
 		} else {
 			connectionPageOpen();

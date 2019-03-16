@@ -43,14 +43,14 @@ class PostManager extends Manager {
     return $affectedPost;
 	}
 
-	public function modifyPostContent($postId , $postContent) {
+	public function modifyPostContent($postId , $postContent , $postTitle) {
 		$db = $this->dbConnect();
 		$req = $db->prepare('
 		UPDATE `posts` 
-		SET content = ? 
+		SET content = ? , title = ? , commentDate = NOW()
 		WHERE id = ?'
 		);
-	$affectedPost = $req->execute(array($postContent , $postId));
+	$affectedPost = $req->execute(array($postContent , $postTitle , $postId));
 
        return $affectedPost;	
 	}
