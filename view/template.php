@@ -16,7 +16,7 @@
 		<div id="pictProfile"></div>
 
 		<h1>Jean Forteroche</h1>
-		<p id="descriptionAuteur">"Et revoici, avec Billet simple pour l'Alaska", notre maître du polar, Jean Forteroche, l'un des pionniers du Blog des livres qui depaint sont long voyage de la France à l'Alaska en passant par le Mexique. 
+		<p id="descriptionAuteur">Et revoici, avec "Billet simple pour l'Alaska", notre maître du polar, Jean Forteroche, l'un des pionniers du Blog des livres qui depaint sont long voyage de la France à l'Alaska en passant par le Mexique. 
 		...Accrochez vous!
 		</p>	
 

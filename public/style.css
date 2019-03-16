@@ -11,6 +11,7 @@ aside {
 	background-color: #4acaa8;
 	width: 25%;
 	height: 100vh;
+	overflow: scroll;
 }
 
 #pictProfile {
@@ -21,8 +22,8 @@ aside {
 	background-size: cover;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 	border-radius: 50%;
 }
 
@@ -52,8 +53,8 @@ a {
 
 .navLi {
 	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	color: white;
 	text-align: center;
 }
