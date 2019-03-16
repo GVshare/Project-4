@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="public/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<script src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=qz3ie152xi3yac6m8t0yi53fg2o6gl3wx1kvf3p51xrc0n1d"></script>
+	<script src="public\tinymce\js\tinymce\tinymce.js"></script>
 	<script type="text/javascript" src="public/tinyMCE.js"></script>
 
 </head>

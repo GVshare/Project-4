@@ -128,6 +128,11 @@ textarea {
 	min-height: 50px;
 }
 
+.post {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
 #author {
 	float: left;
 	height: 4vh;
@@ -264,6 +269,11 @@ textarea {
 .post p, .posts p {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+.posts p {
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .title {

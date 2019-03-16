@@ -142,11 +142,7 @@ var demoBaseConfig = {
   autosave_ask_before_unload: false,
   mentions_fetch: mentionsFetchFunction,
   powerpaste_allow_local_images: true,
-  plugins: [
-    "a11ychecker advcode advlist anchor autolink codesample colorpicker fullscreen help image imagetools",
-    " lists link media noneditable powerpaste preview",
-    " searchreplace table template textcolor tinymcespellchecker visualblocks wordcount mentions"
-  ], /* removed:  charmap insertdatetime print */
+  
  
   templates: [
     {
