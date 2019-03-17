@@ -122,6 +122,8 @@ function publishDraft($draftId) {
     $postManager = new PostManager();
     $post = $postManager->addPost($draft['author'] , $draft['title'] , $draft['content'] ,  $draft['draftDate']);
 
+    adminDeleteDraft($draftId);
+
     header('location: index.php?action=adminChapterView');
 }
 
