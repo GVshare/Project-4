@@ -113,6 +113,47 @@ if (isset($_GET['action'])) {
 		} else {
 			connectionPageOpen();
 		}
+
+	} elseif ($_GET['action'] === 'adminNewChapter') {
+		if (isset($_SESSION['status'])) {
+			adminNewChaptersOpen();
+		} else {
+			connectionPageOpen();
+		}
+
+	} elseif ($_GET['action'] === 'addDraft') {
+		if (isset($_SESSION['status'])) {
+			adminAddDraft();
+		} else {
+			connectionPageOpen();
+		}
+
+	} elseif ($_GET['action'] === 'deleteDraft') {
+		if (isset($_SESSION['status'])) {
+			if (isset($_GET['draftId']) && $_GET['draftId'] > 0) {
+				adminDeleteDraft($_GET['draftId']);
+			}	
+		} else {
+			connectionPageOpen();
+		}
+
+	} elseif ($_GET['action'] === 'adminEditDraft') {
+		if (isset($_SESSION['status'])) {
+			if (isset($_GET['draftId']) && $_GET['draftId'] > 0) {
+				adminEditDraftOpen();
+			}	
+		} else {
+			connectionPageOpen();
+		}
+
+	} elseif ($_GET['action'] === 'editDraft') {
+		if (isset($_SESSION['status'])) {
+			if (isset($_GET['draftId']) && $_GET['draftId'] > 0) {
+				adminModifyDraft($_GET['draftId'] , $_POST['updateDraftContent'] , $_POST['updateDraftTitle']);
+			}
+		} else {
+			connectionPageOpen();
+		}
 	}
 
 

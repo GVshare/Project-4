@@ -50,7 +50,7 @@ class PostManager extends Manager {
 		SET content = ? , title = ?
 		WHERE id = ?'
 		);
-	$affectedPost = $req->execute(array($postContent , $postTitle , $postId));
+		$affectedPost = $req->execute(array($postContent , $postTitle , $postId));
 
        return $affectedPost;	
 	}

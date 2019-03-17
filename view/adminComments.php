@@ -1,8 +1,8 @@
 <?php ob_start(); ?>
 
-<h2>Administrate your comments !</h2>
+<h2>Mes Commentaires !</h2>
 
-<h3 id="reportedCommentTitle"><i class="fas fa-exclamation-triangle"></i> Reported comments <i class="fas fa-exclamation-triangle"></i></h3>
+<h3 id="reportedCommentTitle"><i class="fas fa-exclamation-triangle"></i> Commentaires signalés <i class="fas fa-exclamation-triangle"></i></h3>
 
 <?php
 while ($reportedComment = $reportedComments->fetch()) {   
@@ -32,7 +32,7 @@ while ($reportedComment = $reportedComments->fetch()) {
 ?>
     
 
-<h3 id="latestCommentTitle"><i class="fas fa-comments"></i> Latests comments <i class="fas fa-comments"></i></h3>
+<h3 id="latestCommentTitle"><i class="fas fa-comments"></i> Derniers commentaires <i class="fas fa-comments"></i></h3>
 
 <?php
 while ($comment = $comments->fetch())

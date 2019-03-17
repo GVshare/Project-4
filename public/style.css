@@ -18,7 +18,7 @@ aside {
 	display: block;
 	height: 120px;
 	width: 120px;
-	background-image: url('../public/image/auteurPict2.jpg');
+	background-image: url('../public/image/auteurPict4.jpg');
 	background-size: cover;
 	margin-left: auto;
 	margin-right: auto;
@@ -279,4 +279,17 @@ textarea {
 
 .title {
 	font-size: 2em;
+}
+
+/*============================================ ADMINISTRATOR NEW CHAPTER ======================================================*/
+
+#newDraft {
+	margin-bottom: 20px;
+	width: 20%;
+	height: 5vh;
+	border-radius: 20px;
+	background-color: #4acaa8;
+	color: white;
+	font-weight: bold;
+	
 }

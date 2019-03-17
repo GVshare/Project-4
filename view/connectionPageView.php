@@ -4,10 +4,10 @@
 
 <form method="POST" action="index.php?action=checkUserInfo">
 	<label>Username</label>
-	<input type="text" name="login">
+	<input type="text" name="login" required>
 
 	<label>Password</label>
-	<input type="password" name="password"><br>
+	<input type="password" name="password" required><br>
 
 	<input type="submit" name="submitButton" value="Log In" id="buttonConnectionAdmin">
 </form>

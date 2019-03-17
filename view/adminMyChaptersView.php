@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 
-<h2>Administrate your chapters !</h2>
+<h2> Mes chapitres publiés !</h2>
 
 <?php
 while ($data = $post->fetch())

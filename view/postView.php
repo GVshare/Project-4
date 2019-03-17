@@ -16,10 +16,10 @@
 
 	<form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
 	    <div>
-	        <textarea id="comment" name="comment" placeholder="Entrez votre commentaire..."></textarea>
+	        <textarea id="comment" name="comment" placeholder="Entrez votre commentaire..." required></textarea>
 	    </div>
 	    <div>
-	        <input type="text" id="author" name="author" placeholder="Pseudo" />
+	        <input type="text" id="author" name="author" placeholder="Pseudo" required/>
 	        <input type="submit" id="buttonSubmit" value="Envoyer" /> <br><br><br>
 	    </div>
 	</form>
@@ -40,11 +40,11 @@
 	    	<?php  
 	    	if ($comment['reported'] == TRUE) {
 	    	?>
-	    		<p><a href="index.php?action=reportComment&commentId=<?= $comment['id'] ?>" class="reportedComment" ><i class="fas fa-exclamation-triangle"></i> Reported</a></p>
+	    		<p><a href="index.php?action=reportComment&commentId=<?= $comment['id'] ?>" class="reportedComment" ><i class="fas fa-exclamation-triangle"></i> commentaire signalé </a></p>
 	    	<?php
 	    	} else {
 	    	?>
-	    		<p><a href="index.php?action=reportComment&commentId=<?= $comment['id'] ?>" class="unReportedComment" ><i class="fas fa-exclamation-triangle"></i> Report</a></p>
+	    		<p><a href="index.php?action=reportComment&commentId=<?= $comment['id'] ?>" class="unReportedComment" ><i class="fas fa-exclamation-triangle"></i> Signaler un abus </a></p>
 	    	<?php 
 	    	} 
 	    	?>

@@ -1,12 +1,12 @@
 <?php ob_start(); ?>
 
-<h2>Modify your chapter</h2>
+<h2>Modifier le chapitre !</h2>
 
 <form method="POST" action="index.php?action=modifyPost&postId=<?= $post['id'] ?>">
 
-    <input type="submit" value="Update" id="updateButton"><br>
+    <input type="submit" value="Sauvegarder" id="updateButton"><br>
 
-    <label class="title" >New Title : </label>
+    <label class="title" >Nouveau Titre : </label>
     <input class="title" type="text" name="updatePostTitle" value="<?= $post['title']?>"><br><br>
 
     <textarea id="test" name="updatePostContent">

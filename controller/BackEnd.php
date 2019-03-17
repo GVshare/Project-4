@@ -2,6 +2,7 @@
 
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
+require_once('model/DraftManager.php');
 
 function adminBoardOpen() {
 	require('view/adminBoardView.php');
@@ -17,7 +18,6 @@ function adminCommentsOpen() {
 function adminPostsOpen() {
 	require('view/adminPosts.php');
 }
-
 
 function adminDeleteComment($commentId) {
 
@@ -74,4 +74,45 @@ function adminModifyChapter($postId , $postContent , $postTitle) {
 
     header('location: index.php?action=post&id='.$postId);
 }
+
+function adminNewChaptersOpen() {
+    $draftManager = new DraftManager();
+
+    $drafts = $draftManager->getAllDrafts();
+
+    require('view/adminNewChapters.php');
+}
+
+function adminAddDraft() {
+    $draftManager = new DraftManager();
+
+    $draftManager->addNewDraft();
+
+    header('location: index.php?action=adminNewChapter');
+}
+
+function adminDeleteDraft($draftId) {
+    $draftManager = new DraftManager();
+
+    $drafts = $draftManager->deleteDraft($draftId);
+
+    header('location: index.php?action=adminNewChapter');
+}
+
+function adminEditDraftOpen() {
+    $draftManager = new DraftManager();
+    
+    $draft = $draftManager->getDraft($_GET['draftId']);
+
+    require('view/adminModifyDraftView.php');
+}
+
+function adminModifyDraft($draftId , $draftContent , $draftTitle) {
+    $draftManager = new DraftManager();
+    
+    $draft = $draftManager->modifyDraftContent($draftId , $draftContent , $draftTitle);
+
+    header('location: index.php?action=adminNewChapter');
+}
+
 ?>
