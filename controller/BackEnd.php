@@ -115,4 +115,14 @@ function adminModifyDraft($draftId , $draftContent , $draftTitle) {
     header('location: index.php?action=adminNewChapter');
 }
 
+function publishDraft($draftId) {
+    $draftManager = new DraftManager();
+    $draft = $draftManager->getDraft($_GET['draftId']);
+
+    $postManager = new PostManager();
+    $post = $postManager->addPost($draft['author'] , $draft['title'] , $draft['content'] ,  $draft['draftDate']);
+
+    header('location: index.php?action=adminChapterView');
+}
+
 ?>

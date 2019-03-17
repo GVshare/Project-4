@@ -154,6 +154,15 @@ if (isset($_GET['action'])) {
 		} else {
 			connectionPageOpen();
 		}
+
+	} elseif ($_GET['action'] === 'publishDraft') {
+		if (isset($_SESSION['status'])) {
+			if (isset($_GET['draftId']) && $_GET['draftId'] > 0) {
+				publishDraft($_GET['draftId']);
+			}
+		} else {
+			connectionPageOpen();
+		}
 	}
 
 

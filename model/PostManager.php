@@ -54,6 +54,18 @@ class PostManager extends Manager {
 
        return $affectedPost;	
 	}
+
+	public function addPost($postAuthor , $postTitle , $postContent , $postDate) {
+		$db = $this->dbConnect();
+	    $post = $db->prepare('
+	    	INSERT INTO posts(title, author, content, commentDate) 
+	    	VALUES(? , ? , ? , NOW())'
+	    );
+
+	    $affectedLines = $post->execute(array($postTitle,$postAuthor,$postContent));
+
+	    return $affectedLines;
+	}
 };
 
 ?>

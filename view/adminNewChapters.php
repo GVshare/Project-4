@@ -18,7 +18,7 @@ while ($draft = $drafts->fetch())
     <em><?php echo '<i class="fas fa-user"></i> ' . $draft['author'] . "&emsp;" . ' <i class="fas fa-calendar-alt"></i> ' . $draft['draftDateFr']; ?></em>
 
     <p>
-        <a href="#/" class="readChapter"><i class="fas fa-upload"></i> Publier</a> 
+        <a href="index.php?action=publishDraft&draftId=<?= $draft['id'] ?>" class="readChapter"><i class="fas fa-upload"></i> Publier</a> 
         || 
         <a href="index.php?action=adminEditDraft&draftId=<?= $draft['id'] ?>" class="modifyChapter"><i class="fas fa-pen-fancy"></i> Editer</a> 
         || 
