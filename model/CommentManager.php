@@ -5,7 +5,12 @@
 require_once("model/Manager.php");
 
 class CommentManager extends Manager {
-	
+
+	private $postId;
+	private $author;
+	private $comment;
+	private $commentId;
+
 	public function getComments($postId){
 
 	    $db = $this->dbConnect();

@@ -3,7 +3,7 @@ session_start();
 require_once('model/ConnectionManager.php');
 
 function connectionPageOpen() {
-	require('view/connectionPageView.php');
+	require('view/FrontEnd_View/connectionPageView.php');
 }
 
 function checkInfoValidity($login, $password) {	 

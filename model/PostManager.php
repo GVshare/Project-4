@@ -4,6 +4,12 @@ require_once("model/Manager.php");
 
 class PostManager extends Manager {
 
+	private $postId;
+	private $postAuthor; 
+	private $postTitle; 
+	private $postContent; 
+	private $postDate;
+
 	public function getPosts(){
 		$db = $this->dbConnect();
 

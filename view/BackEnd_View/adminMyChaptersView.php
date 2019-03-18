@@ -20,9 +20,8 @@ while ($data = $post->fetch())
         || 
         <a href="index.php?action=adminDeleteChapter&postId=<?= $data['id'] ?>" class="deleteChapter"><i class="fas fa-trash-alt"></i> Supprimer</a>
     </p>
+
 </div>
-
-
 
 <?php
 }
@@ -31,4 +30,4 @@ $post->closeCursor();
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require('template.php'); ?>
+<?php require('view/template.php'); ?>

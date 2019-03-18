@@ -6,3 +6,4 @@ let reportedCommentTitle = document.getElementById("reportedCommentTitle");
 if (reportedComment == null) {
 	reportedCommentTitle.style.display = 'none';
 };
+

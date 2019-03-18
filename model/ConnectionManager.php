@@ -4,6 +4,9 @@ require_once("model/Manager.php");
 
 class ConnectionManager extends Manager {
 
+	private $login; 
+	private $password;
+
 	public function getUserInfo($login, $password) {
 
 		$db = $this->dbConnect();

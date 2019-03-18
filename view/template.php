@@ -3,10 +3,10 @@
 <head>
 	<title>Mon Blog</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="public/style.css">
+	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<script src="public\tinymce\js\tinymce\tinymce.js"></script>
-	<script type="text/javascript" src="public/tinyMCE.js"></script>
+	<script type="text/javascript" src="public/js/tinyMCE.js"></script>
 
 </head>
 <body>
@@ -26,7 +26,7 @@
 					<?php  
 					if (isset($_SESSION['status'])) {
 					?>
-						<a href="index.php?action=adminBoard"><li class="navLi">Administrator Board</li></a>
+						<a href="index.php?action=adminBoard"><li class="navLi">Admin</li></a>
 					<?php
 					} else {
 					?>
@@ -56,7 +56,7 @@
 					<?php
 					} else {
 					?>
-						<a href="index.php?action=connectionPage"><li class="navLi">Espace Administrateur </li></a>
+						<a href="Connection"><li class="navLi">Espace Administrateur </li></a>
 					<?php
 					}
 					?> 
@@ -79,6 +79,6 @@
 	<?= $content ?>
 
 	</section>
-<script type="text/javascript" src="public/projet4.js"></script>
+<script type="text/javascript" src="public/js/projet4.js"></script>
 </body>
 </html>

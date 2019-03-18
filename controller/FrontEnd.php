@@ -8,7 +8,7 @@ function listPosts() {
 	$postManager = new PostManager();
     $post = $postManager->getPosts();
 
-	require('view/listPostsView.php');
+	require('view/FrontEnd_View/listPostsView.php');
 };
 
 // Get a specifit post and comments base of the ID of the Post
@@ -20,7 +20,7 @@ function postView() {
     $post = $postManager->getPost($_GET['id']);
     $comments = $commentManager->getComments($_GET['id']);
 
-    require('view/postView.php');
+    require('view/FrontEnd_View/postView.php');
 };
 
 // Add a comment in a specific post by specifying the post ID, author and comment

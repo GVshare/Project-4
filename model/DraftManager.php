@@ -4,6 +4,10 @@ require_once("model/Manager.php");
 
 class DraftManager extends Manager {
 
+	private $draftId; 
+	private $draftContent; 
+	private $draftTitle;
+
 	public function getAllDrafts() {
 		$db = $this->dbConnect();
 

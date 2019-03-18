@@ -5,18 +5,18 @@ require_once('model/CommentManager.php');
 require_once('model/DraftManager.php');
 
 function adminBoardOpen() {
-	require('view/adminBoardView.php');
+	require('view/BackEnd_View/adminBoardView.php');
 }
 
 function adminCommentsOpen() {
 	$commentManager = new CommentManager();
 	$comments = $commentManager->getAllComments();
 	$reportedComments = $commentManager->getReportedComments();
-	require('view/adminComments.php');
+	require('view/BackEnd_View/adminComments.php');
 }
 
 function adminPostsOpen() {
-	require('view/adminPosts.php');
+	require('view/BackEnd_View/adminPosts.php');
 }
 
 function adminDeleteComment($commentId) {
@@ -46,7 +46,7 @@ function adminMyChapterOpen() {
 
     $post = $postManager->getPosts();
 
-    require('view/adminMyChaptersView.php');
+    require('view/BackEnd_View/adminMyChaptersView.php');
 }
 
 function adminDeleteChapter($postId) {
@@ -64,7 +64,7 @@ function adminModifyChapterOpen() {
     
     $post = $postManager->getPost($_GET['postId']);
 
-    require('view/adminModifyChapterView.php');
+    require('view/BackEnd_View/adminModifyChapterView.php');
 }
 
 function adminModifyChapter($postId , $postContent , $postTitle) {
@@ -80,7 +80,7 @@ function adminNewChaptersOpen() {
 
     $drafts = $draftManager->getAllDrafts();
 
-    require('view/adminNewChapters.php');
+    require('view/BackEnd_View/adminNewChapters.php');
 }
 
 function adminAddDraft() {
@@ -104,7 +104,7 @@ function adminEditDraftOpen() {
     
     $draft = $draftManager->getDraft($_GET['draftId']);
 
-    require('view/adminModifyDraftView.php');
+    require('view/BackEnd_View/adminModifyDraftView.php');
 }
 
 function adminModifyDraft($draftId , $draftContent , $draftTitle) {
