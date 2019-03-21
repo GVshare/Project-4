@@ -26,9 +26,12 @@ if (isset($_GET['action'])) {
     	}
 
 	} elseif ($_GET['action'] === 'deleteComment') {
-		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
-    		deleteComment($_GET['commentId']);
-    	}
+		if (isset($_SESSION['status'])) {
+			if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
+    			deleteComment($_GET['commentId']);
+    		}
+		}
+		
 
 	// ================================================ CONNECTION ==========================================================
 
@@ -46,15 +49,19 @@ if (isset($_GET['action'])) {
     // =============================================== ADMINISTRATOR ========================================================
 
     } elseif ($_GET['action'] === 'adminDeleteComment') {
-		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
-    		adminDeleteComment($_GET['commentId']);
+    	if (isset($_SESSION['status'])) {
+    		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
+    			adminDeleteComment($_GET['commentId']);
+    		}
     	} else {
 			connectionPageOpen();
 		}
 
     } elseif ($_GET['action'] === 'adminApproveComment') {
-		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
-    		adminApproveComment($_GET['commentId']);
+    	if (isset($_SESSION['status'])) {
+    		if (isset($_GET['commentId']) && $_GET['commentId'] > 0) {
+    			adminApproveComment($_GET['commentId']);
+    		}
     	} else {
 			connectionPageOpen();
 		}

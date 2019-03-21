@@ -3,7 +3,11 @@
 let reportedComment = document.getElementsByClassName("commentsReportedAdminList")[0];
 let reportedCommentTitle = document.getElementById("reportedCommentTitle");
 
-if (reportedComment == null) {
-	reportedCommentTitle.style.display = 'none';
+if (reportedComment == undefined) {
+	if (reportedCommentTitle != undefined ) {
+		reportedCommentTitle.style.display = 'none';
+	};
 };
+
+
 

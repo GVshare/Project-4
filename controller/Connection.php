@@ -1,4 +1,5 @@
 <?php  
+ob_start();
 session_start();
 require_once('model/ConnectionManager.php');
 
@@ -23,7 +24,7 @@ function checkInfoValidity($login, $password) {
 }
 
 function logOut() {
-	unset($_SESSION['status']);
+	session_destroy();
 
 	header('Location: index.php');
 }

@@ -3,6 +3,7 @@
 <head>
 	<title>Mon Blog</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<script src="public\tinymce\js\tinymce\tinymce.js"></script>
@@ -56,11 +57,12 @@
 					<?php
 					} else {
 					?>
-						<a href="Connection"><li class="navLi">Espace Administrateur </li></a>
+						<a href="index.php?action=connectionPage"><li class="navLi">Espace Administrateur </li></a>
 					<?php
 					}
 					?> 
 			</ul>
+			<div id="social"><a class="social" href="#/"><i class="fab fa-facebook-f"></i></a><a class="social" href="#/"><i class="fab fa-twitter"></i></a><a class="social" href="#/"><i class="fab fa-google-plus-g"></i></a><a class="social" href="#/"><i class="fab fa-instagram"></i></a></div>
 
 		</nav>
 
@@ -79,6 +81,8 @@
 	<?= $content ?>
 
 	</section>
+	
+
 <script type="text/javascript" src="public/js/projet4.js"></script>
 </body>
 </html>

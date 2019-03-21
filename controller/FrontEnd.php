@@ -1,4 +1,5 @@
 <?php
+ ob_start();
 // Get the Class
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
