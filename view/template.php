@@ -13,7 +13,7 @@
 <body>
 
 	<!-- ASIDE START-->
-	<aside>
+	<aside id="navigator">
 		<div id="pictProfile"></div>
 
 		<h1>Jean Forteroche</h1>
@@ -31,7 +31,7 @@
 					<?php
 					} else {
 					?>
-						<a href="#/"><li class="navLi">Contacts</li></a>
+						<a href="mailto:JeanForteroche@edition.com"><li class="navLi">Contacts</li></a>
 					<?php 
 					} 
 					?>
@@ -77,6 +77,7 @@
 	<!-- HEADER END -->
 
 	<section id="content">
+		<div id="navOpener">&#9776</div>
 
 	<?= $content ?>
 

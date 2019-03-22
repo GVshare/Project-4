@@ -10,4 +10,21 @@ if (reportedComment == undefined) {
 };
 
 
+// OPEN AND CLOSE NAVIGATOR
+
+let navigatorButton = document.getElementById("navOpener");
+let menu = document.getElementById("navigator");
+let status = false;
+
+navigatorButton.addEventListener("click", function() {
+	if (status === false) {
+	menu.style.width = '90%';
+	status = true;
+} else {
+	menu.style.width = '0%';
+	status = false;
+}
+})
+
+
 

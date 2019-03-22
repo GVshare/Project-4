@@ -350,7 +350,9 @@ textarea {
 @media screen and (max-width: 1023px) {
 
 	aside {
-		display: none;
+		width: 0%;
+		top: 15%;
+		transition: 0.3s;
 	}
 
 	header {
@@ -366,7 +368,7 @@ textarea {
 	}
 
 	h2 {
-		font-size: 4em;
+		font-size: 3em;
 	}
 
 	h3 {
@@ -375,5 +377,49 @@ textarea {
 
 	span {
 		font-size: 2em;
+	}
+
+	#navOpener {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		border-radius: 50%;
+		width: 2em;
+		height: 2em;
+		right: 0.5%;
+		background-color: #4acaa8;
+		opacity: 0.4;
+		color: white;
+		font-size: 2em;
+	}
+
+	#latestCommentTitle {
+		font-size: 1.3em;
+	}
+
+	#commentsReportedAdminList {
+		font-size: 1.3em;
+	}
+
+	#boardAdmin {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.managers {
+		width: 80%;
+		margin-bottom: 5%;
+	}
+
+	#newDraft {
+		width: 80%;
+	}
+
+	#buttonSubmit {
+		width: auto;
+		height: auto;
 	}
 }

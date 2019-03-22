@@ -20,7 +20,7 @@
 	    </div>
 	    <div>
 	        <input type="text" id="author" name="author" placeholder="Pseudo" required/>
-	        <input type="submit" id="buttonSubmit" value="Envoyer" /> <br><br><br>
+	        <input type="submit" id="buttonSubmit" value="Envoyer" />
 	    </div>
 	</form>
 	
