@@ -91,6 +91,17 @@ class CommentManager extends Manager {
         return $affectedComment;
 	}
 
+	public function deleteComments($postId) {
+		$db = $this->dbConnect();
+		$req = $db->prepare('
+			DELETE FROM comments
+			WHERE idPost = ?'
+		);
+		$affectedComments = $req->execute(array($postId));
+
+		return $affectedComments;
+	}
+
 	public function approveComment($commentId) {
 		$db = $this->dbConnect();
 		$req = $db->prepare('

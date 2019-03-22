@@ -44,7 +44,7 @@ class PostManager extends Manager {
 			DELETE FROM posts 
 			WHERE id = ? '
 		);
-    $affectedComment = $req->execute(array($postId));
+    $affectedPost = $req->execute(array($postId));
 
     return $affectedPost;
 	}

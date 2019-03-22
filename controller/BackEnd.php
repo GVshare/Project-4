@@ -57,6 +57,10 @@ function adminDeleteChapter($postId) {
 
     $affectedPost = $postManager->deletePost($postId);
 
+    $commentManager = new CommentManager();
+
+    $affectedComments = $commentManager->deleteComments($postId); 
+
     header('location: index.php?action=adminChapterView');
 }
 
