@@ -352,7 +352,10 @@ textarea {
 	aside {
 		width: 0%;
 		top: 15%;
+		height: 75vh;
 		transition: 0.3s;
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
 	}
 
 	header {
@@ -421,5 +424,9 @@ textarea {
 	#buttonSubmit {
 		width: auto;
 		height: auto;
+	}
+
+	#logOutDiv {
+		margin-bottom: 40px;
 	}
 }
